@@ -180,7 +180,7 @@ main { overflow: hidden; }
 
 .footer { padding: 45px 7vw; display: grid; grid-template-columns: 1.5fr 2fr auto; gap: 40px; border-top: 1px solid var(--line); background: var(--paper); }
 .footer p { max-width: 350px; font-size: .9rem; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 20px; align-content: start; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 20px; align-content: flex-start; }
 .footer-links a:hover { color: var(--burgundy); }
 .copyright { font-size: .75rem; color: var(--muted); white-space: nowrap; }
 
