@@ -62,7 +62,10 @@ main { overflow: hidden; }
   background: var(--ivory);
 }
 .hero-copy { max-width: 720px; }
-.hero-subtitle { font-size: 1.2rem; max-width: 580px; margin: 24px 0 28px; }
+.hero-subtitle { max-width: 440px;
+  font-size: 18px;
+  line-height: 1.6;
+ }
 .eyebrow, .card-eyebrow {
   font-size: .74rem;
   letter-spacing: .18em;
@@ -83,7 +86,12 @@ main { overflow: hidden; }
 .button-outline-light { border: 1px solid rgba(255,255,255,.7); color: white; }
 .center { justify-content: center; }
 
-.hero-visual { position: relative; min-height: 520px; display: grid; place-items: center; }
+.hero-visual { position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 480px;
+} }
 .photo-placeholder, .portrait-placeholder {
   background:
     radial-gradient(circle at 30% 25%, rgba(255,255,255,.7), transparent 24%),
@@ -94,18 +102,26 @@ main { overflow: hidden; }
 }
 .photo-placeholder { width: min(100%, 560px); height: 520px; }
 .hero-photo {
-  width: min(100%, 560px);
-  height: 520px;
-  object-fit: cover;
-  object-position: center;
+   width: min(100%, 500px);
+  height: auto;
   display: block;
-  box-shadow: 18px 22px 0 var(--beige);
+  object-fit: contain;
+  object-position: center;
 }
 .photo-placeholder small { letter-spacing: normal; font-weight: 400; max-width: 220px; margin-top: 10px; }
 .floating-card {
-  position: absolute; bottom: 35px; left: -25px;
-  background: white; padding: 18px 20px; display: flex; gap: 12px;
-  align-items: center; max-width: 300px; box-shadow: 0 14px 45px rgba(40,25,20,.14);
+ .floating-card {
+  position: absolute;
+  left: 12px;
+  bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  padding: 16px 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  max-width: 300px;
+}
 }
 .floating-card span { font-size: 1.8rem; }
 .floating-card strong { display: block; font-size: .9rem; }
@@ -196,11 +212,41 @@ main { overflow: hidden; }
   .navbar { height: auto; padding: 18px 5vw; gap: 18px; flex-wrap: wrap; }
   .navbar nav { width: 100%; justify-content: space-between; gap: 10px; overflow-x: auto; }
   .nav-cta { display: none; }
-  .hero { grid-template-columns: 1fr; padding-top: 60px; }
-  .hero-visual { min-height: 440px; }
-  .photo-placeholder { height: 430px; }
-  .hero-photo {
-  height: 430px;
+  .hero {
+  grid-template-columns: 1fr;
+  gap: 32px;
+  min-height: auto;
+  padding: 48px 24px;
+}
+
+.hero-copy {
+  max-width: none;
+}
+
+.hero-copy h1 {
+  font-size: clamp(44px, 12vw, 58px);
+  line-height: 1;
+  max-width: 100%;
+}
+
+.hero-subtitle {
+  font-size: 17px;
+}
+
+.hero-visual {
+  min-height: auto;
+}
+
+.hero-photo {
+  width: min(100%, 420px);
+  height: auto;
+}
+
+.floating-card {
+  left: 0;
+  bottom: 16px;
+  max-width: 270px;
+  padding: 13px 16px;
 }
   .scenario-grid, .lesson-grid, .material-grid, .material-grid.wide, .review-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: 1fr; }
