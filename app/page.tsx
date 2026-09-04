@@ -16,19 +16,21 @@ export default function Home() {
           </div>
           <p className="micro-copy">1-on-1 lessons · Practical situations · Personalized learning</p>
         </div>
-        <img
-  src="/june.jpg"
-  alt="June - Mandarin teacher"
-  className="hero-photo"
-/>
-          <div className="floating-card">
-            <span>🇨🇳</span>
-            <div>
-              <strong>Chinese you can actually use.</strong>
-              <small>Learn it · Practice it · Use it</small>
-            </div>
-          </div>
-        </div>
+       <div className="hero-visual">
+  <img
+    src="/june.jpg"
+    alt="June - Mandarin teacher"
+    className="hero-photo"
+  />
+
+  <div className="floating-card">
+    <span>🇨🇳</span>
+    <div>
+      <strong>Chinese you can actually use.</strong>
+      <small>Learn it · Practice it · Use it</small>
+    </div>
+  </div>
+</div>
       </section>
 
       <section className="section section-soft">
