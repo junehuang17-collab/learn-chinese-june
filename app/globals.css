@@ -93,6 +93,14 @@ main { overflow: hidden; }
   box-shadow: 18px 22px 0 var(--beige);
 }
 .photo-placeholder { width: min(100%, 560px); height: 520px; }
+.hero-photo {
+  width: min(100%, 560px);
+  height: 520px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  box-shadow: 18px 22px 0 var(--beige);
+}
 .photo-placeholder small { letter-spacing: normal; font-weight: 400; max-width: 220px; margin-top: 10px; }
 .floating-card {
   position: absolute; bottom: 35px; left: -25px;
@@ -191,6 +199,9 @@ main { overflow: hidden; }
   .hero { grid-template-columns: 1fr; padding-top: 60px; }
   .hero-visual { min-height: 440px; }
   .photo-placeholder { height: 430px; }
+  .hero-photo {
+  height: 430px;
+}
   .scenario-grid, .lesson-grid, .material-grid, .material-grid.wide, .review-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: 1fr; }
   .step, .step + .step { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px 0; }
@@ -206,6 +217,9 @@ main { overflow: hidden; }
   .hero { min-height: auto; }
   .hero-visual { min-height: 350px; }
   .photo-placeholder { height: 340px; }
+  .hero-photo {
+  height: 340px;
+}
   .floating-card { left: 0; bottom: 15px; max-width: 270px; }
   .scenario-grid, .lesson-grid, .material-grid, .material-grid.wide, .review-grid, .check-grid, .philosophy-grid { grid-template-columns: 1fr; }
   .feature-list > div { grid-template-columns: 1fr; gap: 5px; }
