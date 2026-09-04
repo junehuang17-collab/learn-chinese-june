@@ -53,56 +53,42 @@ main { overflow: hidden; }
 .nav-cta { background: var(--burgundy); color: white !important; padding: 11px 18px; border-radius: 999px; }
 
 .hero {
-  min-height: 690px;
   display: grid;
-  grid-template-columns: 1.02fr .98fr;
-  gap: 5vw;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
   align-items: center;
-  padding: 80px 7vw;
-  background: var(--ivory);
+  min-height: 560px;
+  padding: 64px 72px;
 }
-.hero-copy { max-width: 720px; }
-.hero-subtitle { max-width: 440px;
+
+.hero-copy {
+  max-width: 520px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(48px, 5vw, 62px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  margin: 18px 0 24px;
+  max-width: 500px;
+}
+
+.hero-subtitle {
+  max-width: 440px;
   font-size: 18px;
   line-height: 1.6;
- }
-.eyebrow, .card-eyebrow {
-  font-size: .74rem;
-  letter-spacing: .18em;
-  font-weight: 800;
-  color: var(--burgundy);
-  margin: 0 0 14px;
 }
-.micro-copy { font-size: .78rem; margin-top: 18px; }
-.button-row { display: flex; flex-wrap: wrap; gap: 12px; }
-.button {
-  display: inline-flex; align-items: center; justify-content: center;
-  padding: 14px 22px; border-radius: 999px; font-weight: 700;
-  transition: transform .2s ease, background .2s ease;
-}
-.button:hover { transform: translateY(-2px); }
-.button-dark { background: var(--burgundy); color: white; }
-.button-light { background: white; color: var(--burgundy); }
-.button-outline-light { border: 1px solid rgba(255,255,255,.7); color: white; }
-.center { justify-content: center; }
 
-.hero-visual { position: relative;
+.hero-visual {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 480px;
-} }
-.photo-placeholder, .portrait-placeholder {
-  background:
-    radial-gradient(circle at 30% 25%, rgba(255,255,255,.7), transparent 24%),
-    linear-gradient(145deg, #d8c7b5, #8f6b60);
-  color: white; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; letter-spacing: .12em; font-weight: 800;
-  box-shadow: 18px 22px 0 var(--beige);
 }
-.photo-placeholder { width: min(100%, 560px); height: 520px; }
+
 .hero-photo {
-   width: min(100%, 500px);
+  width: min(100%, 500px);
   height: auto;
   display: block;
   object-fit: contain;
