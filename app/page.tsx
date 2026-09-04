@@ -16,11 +16,11 @@ export default function Home() {
           </div>
           <p className="micro-copy">1-on-1 lessons · Practical situations · Personalized learning</p>
         </div>
-        <div className="hero-visual">
-          <div className="photo-placeholder">
-            <span>YOUR PHOTO</span>
-            <small>Replace this with your favorite teaching / lifestyle photo</small>
-          </div>
+        <img
+  src="/june.jpg"
+  alt="June - Mandarin teacher"
+  className="hero-photo"
+/>
           <div className="floating-card">
             <span>🇨🇳</span>
             <div>
