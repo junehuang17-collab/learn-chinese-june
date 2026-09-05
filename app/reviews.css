@@ -14,5 +14,10 @@
 .reviews-editorial .review-card>p{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:1.2rem;line-height:1.62;color:#4b5563;letter-spacing:-.012em}
 .reviews-editorial .review-date{margin-top:20px;padding-top:14px;border-top:1px solid #eee9e3}
 .reviews-editorial .review-date time{color:#9a9aa9;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;line-height:1.2;font-weight:600}
+.reviews-editorial .review-pin{margin-left:auto;flex:0 0 auto;width:30px;height:30px;color:#b9b9b9;display:grid;place-items:center}
+.reviews-editorial .review-pin svg{width:28px;height:28px;display:block}
+.reviews-editorial > .review-grid.review-masonry > .review-grid.review-masonry{display:contents}
+.reviews-editorial > .review-grid.review-masonry > .review-grid.review-masonry > .review-card:first-child .review-flag{font-size:0}
+.reviews-editorial > .review-grid.review-masonry > .review-grid.review-masonry > .review-card:first-child .review-flag::after{content:"🇷🇺";font-size:14px}
 @media(max-width:900px){.reviews-editorial .review-grid.review-masonry{grid-template-columns:1fr;gap:16px}.reviews-editorial .review-card{padding:24px 22px 22px}.reviews-editorial .review-card>p{font-size:1.12rem;line-height:1.62}}
 @media(max-width:520px){.reviews-editorial .review-card{padding:22px 18px 20px;border-radius:16px}.reviews-editorial .review-avatar-wrap,.reviews-editorial .review-avatar,.reviews-editorial .review-avatar-photo{width:58px;height:58px}.reviews-editorial .review-avatar-wrap{flex-basis:58px}.reviews-editorial .review-flag{width:23px;height:23px;font-size:13px}.reviews-editorial .review-student-meta strong{font-size:.98rem}.reviews-editorial .review-student-meta span{font-size:.82rem}.reviews-editorial .review-card>p{font-size:1.05rem}.reviews-editorial .review-date{margin-top:18px}}
