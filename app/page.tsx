@@ -2,6 +2,7 @@ import Link from "next/link";
 import "./hero.css";
 import { siteConfig } from "@/data/site";
 import SectionTitle from "@/components/SectionTitle";
+import Reviews from "@/components/Reviews";
 
 const booking = siteConfig.calcom;
 
@@ -69,7 +70,7 @@ export default function Home() {
         <SectionTitle eyebrow="STUDENT VOICES" title="Real learners. Real progress." description="The goal isn't to sound perfect in a textbook. It's to feel comfortable using Chinese in real life." />
         <div className="review-summary"><div className="review-score"><strong>{siteConfig.reviewStats.rating}</strong><div className="stars">★★★★★</div><span>{siteConfig.reviewStats.reviews} reviews</span></div><div className="review-stat"><strong>{siteConfig.reviewStats.attendance}</strong><span>Attendance</span></div><div className="review-stat"><strong>{siteConfig.reviewStats.response}</strong><span>Response rate</span></div></div>
         <div className="review-tags">{siteConfig.reviewTags.map(([label, count]) => <span key={label}>{label} <b>· {count}</b></span>)}</div>
-        <div className="review-grid review-masonry">{siteConfig.reviews.map((review) => <blockquote className="review-card" key={review.quote}><div className="stars">★★★★★</div><p>“{review.quote}”</p><cite>{review.label}</cite></blockquote>)}</div>
+        <Reviews />
       </section>
 
       <section className="final-cta"><p className="eyebrow">READY TO USE CHINESE?</p><h2>Stop studying Chinese.<br />Start living in it.</h2><p>Book a low-pressure 20-minute trial lesson and tell me what you want to be able to do in Chinese. We'll take it from there.</p><div className="button-row center"><a className="button button-light" href={booking} target="_blank" rel="noreferrer">Book a 20-min Trial Lesson</a><Link className="button button-outline-light" href="/materials">Get Free Starter Kit</Link></div></section>
