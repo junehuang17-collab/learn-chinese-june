@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link href="/materials">Materials</Link>
         <Link href="/about">About</Link>
         <Link href="/reviews">Reviews</Link>
-        <a className="nav-cta" href={siteConfig.calendly} target="_blank" rel="noreferrer">Book a lesson</a>
+        <a className="nav-cta" href={siteConfig.calcom} target="_blank" rel="noreferrer">Book a lesson</a>
       </nav>
     </header>
   );
