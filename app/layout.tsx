@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./site-overrides.css";
 import { siteConfig } from "@/data/site";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,7 +8,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: `${siteConfig.brand} | Practical Mandarin`,
   description: siteConfig.description,
-  metadataBase: new URL("https://example.com")
+  metadataBase: new URL("https://learn-chinese-june.vercel.app")
 };
 
 export default function RootLayout({
