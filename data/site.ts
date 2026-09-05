@@ -2,32 +2,31 @@ export const siteConfig = {
   name: "June",
   brand: "Learn Chinese with June",
   shortBrand: "Learn.Chinese.June",
-  tagline: "Learn Chinese. Use Chinese. Live in China.",
-  description: "Practical Mandarin lessons for real life in China.",
+  tagline: "Practical Mandarin for real life.",
+  description: "Speak more naturally, handle everyday situations with confidence, and enjoy life in China in Chinese.",
   instagram: "https://www.instagram.com/learn.chinese.june/",
   email: "YOUR_EMAIL@example.com",
 
-  // Replace these two links when your accounts are ready.
-  calendly: "https://calendly.com/YOUR-CALENDLY-LINK",
+  calcom: "https://cal.com/june-chinese-lesson/ok",
   payhip: "https://payhip.com/YOUR-PAYHIP-LINK",
 
   lessons: [
     {
       title: "Survival Chinese",
-      eyebrow: "For beginners & travelers",
-      description: "Learn the Chinese you need to navigate daily life in China with confidence.",
+      eyebrow: "BEGINNERS · TRAVELERS",
+      description: "Learn the Chinese you need to navigate everyday life in China with confidence.",
       items: ["Ordering food", "Taking a taxi", "Shopping", "Hotels & directions"]
     },
     {
       title: "Conversational Chinese",
-      eyebrow: "For A2–B2 learners",
-      description: "Build confidence through practical conversations, natural expressions and speaking practice.",
+      eyebrow: "A2–B2 LEARNERS",
+      description: "Build speaking confidence through practical conversations, natural expressions and guided practice.",
       items: ["Speaking", "Listening", "Daily conversations", "Natural expressions"]
     },
     {
       title: "Real-Life Chinese",
-      eyebrow: "For intermediate & advanced",
-      description: "Explore modern Chinese culture, social language, internet slang and real conversations.",
+      eyebrow: "INTERMEDIATE · ADVANCED",
+      description: "Go beyond textbooks with modern Chinese culture, social language, internet slang and real conversations.",
       items: ["Chinese culture", "Social situations", "Internet slang", "Chinese media"]
     }
   ],
@@ -48,7 +47,7 @@ export const siteConfig = {
     {
       title: "Shopping for Clothes",
       level: "B1–B2",
-      description: "Practical Chinese for sizes, prices, colors, trying things on and more.",
+      description: "Practical Chinese for sizes, prices, colors and trying things on.",
       icon: "🛍️"
     },
     {
