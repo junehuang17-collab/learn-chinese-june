@@ -64,18 +64,45 @@ export const siteConfig = {
     }
   ],
 
+  reviewStats: {
+    rating: "5.0",
+    reviews: "970",
+    attendance: "100%",
+    response: "100%"
+  },
+
+  reviewTags: [
+    ["For beginners", "361"],
+    ["Structured lessons", "7"],
+    ["Patient", "11"],
+    ["Provides materials", "1"],
+    ["Pronunciation correction", "2"]
+  ],
+
   reviews: [
     {
-      quote: "June makes Chinese feel practical and much less intimidating.",
-      label: "Student review"
+      quote: "I've been learning Chinese with June for almost a year now, and it's been a wonderful experience. Her lessons are always lively and engaging. June carefully prepares her own materials, tailoring them to my level and goals, and she helps me understand even the subtle nuances of the language.",
+      label: "Anatolii · 224 Chinese lessons"
     },
     {
-      quote: "I learned phrases I could actually use in daily life in China.",
-      label: "Student review"
+      quote: "June tailors our classes to fit my needs exactly. She perfectly blends a good amount of reading, speaking, and listening into our lessons on day to day and deep conversational topics. I am so happy with my progress and I am able to converse and express myself.",
+      label: "Paige · 200 Chinese lessons"
     },
     {
-      quote: "The lessons are clear, useful and focused on real conversations.",
-      label: "Student review"
+      quote: "I've been learning with June for 7 months now and I am still amazed when I can read a passage. I had zero knowledge when we started. Her patience and flexibility ensure the lesson is unique to me and my goals.",
+      label: "Stefania Sharp · 262 Chinese lessons"
+    },
+    {
+      quote: "Over the past two years, I've visited China five times, and before every trip June helped me prepare by teaching me the vocabulary and expressions I would actually need. Thanks to that, I now feel confident using Chinese in real-life situations.",
+      label: "Anatolii · 224 Chinese lessons"
+    },
+    {
+      quote: "I've had a few lessons now with June and she is fantastic! Her lesson plans are great and well-targeted, and she is very supportive and friendly.",
+      label: "Riley Gavigan · 5 Chinese lessons"
+    },
+    {
+      quote: "I always walk away from these lessons with something new, about the language, country, its people and customs.",
+      label: "George · 28 Chinese lessons"
     }
   ]
 };
