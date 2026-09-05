@@ -12,33 +12,9 @@ const scenarioPills = [
   ["🍜", "RESTAURANT", "不要香菜，谢谢。", "bú yào xiāngcài, xièxie", "No cilantro, please."],
 ];
 
-const momentCardStyles = `
-  .moments-layout{display:grid;grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr);gap:clamp(48px,7vw,112px);align-items:center;max-width:1180px;margin:0 auto}
-  .moments-heading{position:relative;padding:12px 0 20px}
-  .moments-heading .eyebrow{margin-bottom:22px}
-  .moments-heading h2{font-size:clamp(2.65rem,4.4vw,4.8rem);line-height:.94;letter-spacing:-.055em;margin:0;color:var(--charcoal)}
-  .moments-heading h2 span{display:block}
-  .moments-heading h2 span+span{margin-left:clamp(18px,3vw,54px);margin-top:10px;color:var(--burgundy)}
-  .moments-heading .intro-note{max-width:310px;margin:28px 0 0;color:var(--muted);font-size:.88rem;font-weight:500;line-height:1.7}
-  .moments-heading:after{content:"";display:block;width:44px;height:1px;background:var(--burgundy);margin-top:30px}
-  .moments-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
-  .moment-card{min-height:270px;padding:28px 28px 24px;background:#fff;border:1px solid rgba(36,36,36,.09);border-radius:18px;box-shadow:0 10px 30px rgba(36,36,36,.045);display:flex;flex-direction:column;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
-  .moment-card:hover{transform:translateY(-5px);box-shadow:0 18px 42px rgba(36,36,36,.08);border-color:rgba(100,31,43,.18)}
-  .moment-card-header{display:flex;align-items:center;gap:10px;min-height:25px}
-  .moment-card-icon{font-size:1.1rem;line-height:1}
-  .moment-card-scene{font-size:.65rem;font-weight:800;letter-spacing:.15em;color:var(--muted)}
-  .moment-card-main{margin:auto 0;padding:28px 0 25px}
-  .moment-card-main strong{display:block;font-size:clamp(1.65rem,2.5vw,2.15rem);line-height:1.15;letter-spacing:-.035em;color:var(--charcoal);font-weight:800}
-  .moment-card-main em{display:block;margin-top:9px;font-family:Georgia,"Times New Roman",serif;font-size:.83rem;font-style:italic;letter-spacing:.015em;color:#8b8580}
-  .moment-card-translation{padding-top:15px;border-top:1px solid #eee8e2;color:#a39b94;font-size:.76rem;line-height:1.5}
-  @media(max-width:900px){.moments-layout{grid-template-columns:1fr;gap:42px}.moments-heading{padding-top:0}.moments-heading h2{font-size:clamp(2.7rem,10vw,4rem)}.moments-grid{gap:24px}}
-  @media(max-width:600px){.moments-layout{gap:34px}.moments-heading h2 span+span{margin-left:14px}.moments-heading .intro-note{margin-top:22px}.moments-grid{grid-template-columns:1fr;gap:18px}.moment-card{min-height:245px;padding:23px 22px 20px}.moment-card-main{padding:22px 0 20px}.moment-card-main strong{font-size:1.75rem}}
-`;
-
 export default function Home() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: momentCardStyles }} />
       <section className="hero hero-editorial">
         <div className="hero-copy">
           <p className="eyebrow">NO MORE ROBOTIC TEXTBOOK CHINESE</p>
