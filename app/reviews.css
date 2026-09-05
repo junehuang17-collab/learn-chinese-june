@@ -1,0 +1,18 @@
+.reviews-editorial .review-grid.review-masonry{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.reviews-editorial .review-card{margin:0;padding:26px 26px 24px;background:#fff;border:1px solid rgba(100,31,43,.10);border-top:4px solid var(--burgundy);border-radius:18px;box-shadow:0 10px 28px rgba(36,36,36,.045);display:flex;flex-direction:column;min-width:0;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.reviews-editorial .review-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(36,36,36,.08)}
+.reviews-editorial .review-profile{display:flex;align-items:center;gap:14px;min-width:0;margin-bottom:14px}
+.reviews-editorial .review-avatar-wrap{position:relative;width:64px;height:64px;flex:0 0 64px}
+.reviews-editorial .review-avatar{width:64px;height:64px;display:grid;place-items:center;border-radius:50%;overflow:hidden}
+.reviews-editorial .review-avatar-photo{object-fit:cover;object-position:center;width:64px;height:64px;display:block}
+.reviews-editorial .review-avatar-initial{font-family:Arial,Helvetica,sans-serif;font-size:1.45rem;font-weight:800;color:#fff;background:#10b981}
+.reviews-editorial .review-flag{position:absolute;right:-2px;bottom:-2px;width:25px;height:25px;display:grid;place-items:center;border-radius:50%;background:#fff;border:2px solid #fff;box-shadow:0 2px 7px rgba(0,0,0,.16);font-size:14px;line-height:1}
+.reviews-editorial .review-student-meta{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.reviews-editorial .review-student-meta strong{display:block;color:#3f3b4f;font-size:1.02rem;line-height:1.25;font-weight:800;white-space:normal}
+.reviews-editorial .review-student-meta span{display:block;margin-top:5px;color:#9a9aa9;font-size:.88rem;line-height:1.2;font-weight:600}
+.reviews-editorial .review-card>.stars{margin:0 0 14px;color:var(--burgundy);font-size:.9rem;line-height:1;letter-spacing:.16em}
+.reviews-editorial .review-card>p{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:1.2rem;line-height:1.62;color:#4b5563;letter-spacing:-.012em}
+.reviews-editorial .review-date{margin-top:20px;padding-top:14px;border-top:1px solid #eee9e3}
+.reviews-editorial .review-date time{color:#9a9aa9;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;line-height:1.2;font-weight:600}
+@media(max-width:900px){.reviews-editorial .review-grid.review-masonry{grid-template-columns:1fr;gap:16px}.reviews-editorial .review-card{padding:24px 22px 22px}.reviews-editorial .review-card>p{font-size:1.12rem;line-height:1.62}}
+@media(max-width:520px){.reviews-editorial .review-card{padding:22px 18px 20px;border-radius:16px}.reviews-editorial .review-avatar-wrap,.reviews-editorial .review-avatar,.reviews-editorial .review-avatar-photo{width:58px;height:58px}.reviews-editorial .review-avatar-wrap{flex-basis:58px}.reviews-editorial .review-flag{width:23px;height:23px;font-size:13px}.reviews-editorial .review-student-meta strong{font-size:.98rem}.reviews-editorial .review-student-meta span{font-size:.82rem}.reviews-editorial .review-card>p{font-size:1.05rem}.reviews-editorial .review-date{margin-top:18px}}
