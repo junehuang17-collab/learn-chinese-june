@@ -7,7 +7,7 @@ const booking = siteConfig.calcom;
 
 const scenarioPills = [
   ["☕", "COFFEE SHOP", "少糖，谢谢。", "shǎo táng, xièxie", "Less sugar, please."],
-  ["🚕", "ON A DIDI", "我在这里下车。", "wǒ zài zhèlǐ xià chē", "I'll get off here."],
+  ["🚕", "TAKING A DIDI", "我在这里下车。", "wǒ zài zhèlǐ xià chē", "I'll get off here."],
   ["🛍", "SHOPPING", "可以便宜一点吗？", "kěyǐ piányi yìdiǎn ma?", "Could you make it a little cheaper?"],
   ["🍜", "RESTAURANT", "不要香菜，谢谢。", "bú yào xiāngcài, xièxie", "No cilantro, please."],
 ];
@@ -47,20 +47,22 @@ export default function Home() {
         <div className="intro-strip-inner">
           <div className="intro-label">
             <p className="eyebrow">REAL-LIFE CHINESE</p>
-            <h2>Four phrases.<br />Four real moments.</h2>
+            <h2><span>Four phrases.</span><br /><span>Four real moments.</span></h2>
             <p className="intro-note">This is the kind of Chinese you'll use outside the classroom.</p>
           </div>
           <div className="scenario-pills">
             {scenarioPills.map(([icon, scene, chinese, pinyin, english]) => (
-              <div className="scenario-pill" key={scene}>
-                <span className="pill-icon">{icon}</span>
-                <div className="pill-copy">
+              <article className="scenario-pill" key={scene}>
+                <div className="pill-header">
+                  <span className="pill-icon" aria-hidden="true">{icon}</span>
                   <span className="pill-scene">{scene}</span>
+                </div>
+                <div className="pill-main">
                   <strong>{chinese}</strong>
                   <em>{pinyin}</em>
-                  <small>{english}</small>
                 </div>
-              </div>
+                <div className="pill-translation">{english}</div>
+              </article>
             ))}
           </div>
         </div>
