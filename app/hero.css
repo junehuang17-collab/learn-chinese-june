@@ -6,3 +6,22 @@
 .hero-redesign .hero-visual{min-height:0;width:100%;display:flex;justify-content:center;align-items:center}.hero-redesign .hero-video-frame{width:100%;max-width:540px;aspect-ratio:16/9;overflow:hidden;border-radius:24px;border:1px solid rgba(0,0,0,.05);background:#e7e5e4;box-shadow:0 20px 40px -15px rgba(0,0,0,.08)}.hero-redesign .hero-video{display:block;width:100%;height:100%;border:0}
 @media(max-width:900px){.hero-redesign{grid-template-columns:1fr;gap:38px;padding:56px 6vw 68px}.hero-redesign .hero-copy{max-width:680px}.hero-redesign .hero-copy h1{font-size:clamp(2.5rem,7vw,3.2rem);margin:20px 0 26px}.hero-redesign .hero-highlights{margin-bottom:28px}.hero-redesign .hero-highlight p{font-size:1rem}.hero-redesign .hero-visual{padding-top:0}.hero-redesign .hero-video-frame{max-width:540px;border-radius:22px}}
 @media(max-width:520px){.hero-redesign{padding:46px 5vw 58px;gap:32px}.hero-redesign .hero-badge{font-size:.58rem;padding:7px 10px;letter-spacing:.08em}.hero-redesign .hero-copy h1{font-size:clamp(2.5rem,11vw,3.2rem);line-height:1.15;margin:18px 0 24px}.hero-redesign .hero-highlights{gap:16px;margin-bottom:28px}.hero-redesign .hero-highlight{grid-template-columns:25px 1fr;gap:8px}.hero-redesign .hero-highlight p{font-size:.95rem;line-height:1.5}.hero-redesign .button-row{display:grid;grid-template-columns:1fr;gap:16px}.hero-redesign .button{width:100%;min-height:50px}.hero-redesign .hero-trust{font-size:.62rem;line-height:1.5}.hero-redesign .hero-video-frame{border-radius:18px}}
+
+/* Student review cards */
+.reviews-editorial .review-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.reviews-editorial .review-card{position:relative;margin:0;padding:26px 26px 24px;background:#fff;border:1px solid rgba(28,25,23,.07);border-top:4px solid #641f2b;border-radius:18px;box-shadow:0 8px 24px rgba(28,25,23,.035);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.reviews-editorial .review-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(28,25,23,.08)}
+.review-profile{display:flex;align-items:center;min-width:0;gap:14px;margin-bottom:16px}
+.review-avatar-wrap{position:relative;flex:0 0 64px;width:64px;height:64px}
+.review-avatar{width:64px;height:64px;display:grid;place-items:center;border-radius:50%;overflow:hidden}
+.review-avatar-photo{display:block;object-fit:cover;object-position:center}
+.review-avatar-initial{font-family:Arial,Helvetica,sans-serif;font-size:1.55rem;font-weight:800;color:#fff}
+.review-avatar-teal{background:#12aebd}.review-avatar-green{background:#11cf8f}
+.review-flag{position:absolute;right:-2px;bottom:-1px;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:#fff;border:2px solid #fff;box-shadow:0 2px 7px rgba(0,0,0,.14);font-size:15px;line-height:1}
+.review-student-meta{display:flex;flex-direction:column;min-width:0;gap:3px}.review-student-meta strong{color:#1C1917;font-size:1.05rem;font-weight:700;line-height:1.2}.review-student-meta span{color:#9ca3af;font-size:.92rem;font-weight:600;line-height:1.3}
+.review-pin{margin-left:auto;align-self:flex-start;color:#12aebd;font-size:1.45rem;line-height:1;transform:rotate(-18deg);opacity:.95}
+.reviews-editorial .review-card .stars{margin:0 0 14px;color:#641f2b;font-size:.93rem;letter-spacing:.18em;line-height:1}
+.reviews-editorial .review-card p{margin:0;color:#4f5265;font-family:Georgia,"Times New Roman",serif;font-size:1.2rem;line-height:1.62}
+.review-date{margin-top:18px}.review-date time{color:#9ca3af;font-family:Arial,Helvetica,sans-serif;font-size:.84rem;font-weight:600;line-height:1.3}
+@media(max-width:900px){.reviews-editorial .review-grid{grid-template-columns:1fr}.reviews-editorial .review-card{padding:24px 22px 22px}.reviews-editorial .review-card p{font-size:1.08rem;line-height:1.62}}
+@media(max-width:520px){.reviews-editorial .review-card{border-radius:16px;border-top-width:4px;padding:21px 18px 20px}.review-avatar-wrap,.review-avatar{width:58px;height:58px}.review-avatar-wrap{flex-basis:58px}.review-avatar-initial{font-size:1.35rem}.review-flag{width:22px;height:22px;font-size:14px}.review-student-meta strong{font-size:1rem}.review-student-meta span{font-size:.84rem}.reviews-editorial .review-card p{font-size:1rem;line-height:1.65}.review-date{margin-top:16px}.review-date time{font-size:.78rem}}
