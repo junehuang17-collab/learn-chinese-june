@@ -70,7 +70,7 @@ body { background: var(--paper); }
 .intro-statement { margin: 0; max-width: 900px; color: var(--charcoal); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.5rem, 3vw, 2.35rem); line-height: 1.28; letter-spacing: -.025em; }
 
 .section { padding: 104px 7vw; }
-.section > .section-title, .section > .scenario-grid, .section > .steps, .section > .lesson-grid, .section > .material-grid, .section > .center-link, .section > .review-grid, .section > .review-source { max-width: 1180px; margin-left: auto; margin-right: auto; }
+.section > .section-title, .section > .scenario-grid, .section > .steps, .section > .lesson-grid, .section > .material-grid, .section > .center-link, .section > .review-grid, .section > .review-source, .section > .review-summary, .section > .review-tags { max-width: 1180px; margin-left: auto; margin-right: auto; }
 .section-title { margin-bottom: 48px; }
 .section-title h2 { font-size: clamp(2.3rem, 4vw, 3.7rem); max-width: 760px; }
 .eyebrow { font-size: .7rem; letter-spacing: .16em; font-weight: 800; }
@@ -100,15 +100,97 @@ body { background: var(--paper); }
 .material-art { height: 155px; }
 .material-content h3 { font-family: Georgia, serif; }
 
+/* Student reviews: inspired by the clean, data-rich profile UI in the reference screenshots,
+   but restyled to match June's own burgundy editorial brand. */
 .reviews-editorial .section-title { margin-bottom: 42px; }
-.review-grid { grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); }
-.review-card { min-height: 255px; border: 0; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: transparent; padding: 30px 34px 28px 0; }
-.review-card + .review-card { padding-left: 30px; }
-.review-card:last-child { border-right: 0; }
-.review-card p { font-size: 1.22rem; line-height: 1.45; margin-top: 24px; }
-.review-source { display: flex; justify-content: space-between; align-items: center; margin-top: 28px; font-size: .8rem; }
-.review-source span { color: var(--muted); }
-.review-source a { color: var(--burgundy); font-weight: 800; }
+.review-summary {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  background: #f1f2f5;
+  border: 1px solid #e0e1e6;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.review-score, .review-stat {
+  min-height: 145px;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.review-score { border-right: 1px solid #dfe0e5; }
+.review-score strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.5rem, 6vw, 5.4rem);
+  line-height: .8;
+  letter-spacing: -.06em;
+  color: var(--charcoal);
+}
+.review-score .stars { margin: 15px 0 4px; }
+.review-score span, .review-stat span { color: #858897; font-size: .8rem; font-weight: 700; }
+.review-stat { border-right: 1px solid #dfe0e5; }
+.review-stat:last-child { border-right: 0; }
+.review-stat strong {
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--charcoal);
+}
+.review-stat span { margin-top: 8px; }
+
+.review-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.review-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 17px;
+  border: 1px solid #dfe1e7;
+  border-radius: 999px;
+  background: #fff;
+  color: #56586a;
+  font-size: .84rem;
+  font-weight: 700;
+}
+.review-tags b { color: #9295a2; font-weight: 700; }
+
+.review-masonry {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  border: 0;
+  align-items: start;
+}
+.review-masonry .review-card,
+.review-masonry .review-card + .review-card {
+  min-height: 0;
+  margin: 0;
+  padding: 28px 30px;
+  border: 0;
+  border-radius: 16px;
+  background: #f1f2f5;
+  color: #4f5265;
+}
+.review-masonry .review-card p {
+  margin: 18px 0 22px;
+  color: #4f5265;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.58;
+  font-weight: 600;
+}
+.review-masonry .review-card cite {
+  color: #8b8d9b;
+  font-size: .78rem;
+  font-weight: 700;
+}
+.review-masonry .stars { color: #e4a719; letter-spacing: .12em; font-size: .9rem; }
+.review-masonry .review-card:nth-child(3n) { margin-top: 4px; }
 
 .final-cta { padding: 120px 7vw; }
 .final-cta h2 { font-size: clamp(2.6rem, 5vw, 4.8rem); line-height: .98; }
@@ -121,11 +203,12 @@ body { background: var(--paper); }
   .hero-editorial .floating-card { left: 2%; }
   .intro-strip-inner { grid-template-columns: 1fr; gap: 12px; }
   .scenario-grid { grid-template-columns: repeat(2, 1fr); }
-  .lesson-grid, .review-grid { grid-template-columns: 1fr; }
+  .lesson-grid { grid-template-columns: 1fr; }
   .lesson-card { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.2); min-height: auto; }
   .lesson-card:last-child { border-bottom: 0; }
-  .review-card, .review-card + .review-card { padding: 28px 0; border-right: 0; }
-  .review-card:last-child { border-bottom: 0; }
+  .review-summary { grid-template-columns: 1.4fr 1fr 1fr; }
+  .review-score, .review-stat { padding: 22px; }
+  .review-masonry { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
@@ -139,6 +222,14 @@ body { background: var(--paper); }
   .steps { grid-template-columns: 1fr; }
   .step, .step + .step { padding: 24px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .step:last-child { border-bottom: 0; }
-  .review-source { align-items: flex-start; gap: 12px; flex-direction: column; }
+  .review-summary { grid-template-columns: 1fr 1fr; border-radius: 15px; }
+  .review-score { grid-column: 1 / -1; border-right: 0; border-bottom: 1px solid #dfe0e5; min-height: 155px; }
+  .review-stat { min-height: 100px; padding: 18px; }
+  .review-stat:last-child { border-right: 0; }
+  .review-tags { gap: 8px; }
+  .review-tags span { padding: 9px 13px; font-size: .76rem; }
+  .review-masonry .review-card,
+  .review-masonry .review-card + .review-card { padding: 24px 22px; border-radius: 14px; }
+  .review-masonry .review-card p { font-size: .94rem; }
   .final-cta { padding: 90px 6vw; }
 }
