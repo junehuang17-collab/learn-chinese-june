@@ -109,8 +109,31 @@ export default function Home() {
       </section>
 
       <section className="section section-soft reviews-editorial">
-        <SectionTitle eyebrow="STUDENT VOICES" title="Real learners. Real progress." description="A few words from students who have learned to use Chinese with more confidence." />
-        <div className="review-grid">
+        <SectionTitle eyebrow="STUDENT VOICES" title="Real learners. Real progress." description="A selection of feedback from students learning Chinese for travel, conversation and everyday life." />
+
+        <div className="review-summary">
+          <div className="review-score">
+            <strong>{siteConfig.reviewStats.rating}</strong>
+            <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span>{siteConfig.reviewStats.reviews} reviews</span>
+          </div>
+          <div className="review-stat">
+            <strong>{siteConfig.reviewStats.attendance}</strong>
+            <span>Attendance</span>
+          </div>
+          <div className="review-stat">
+            <strong>{siteConfig.reviewStats.response}</strong>
+            <span>Response rate</span>
+          </div>
+        </div>
+
+        <div className="review-tags">
+          {siteConfig.reviewTags.map(([label, count]) => (
+            <span key={label}>{label} <b>· {count}</b></span>
+          ))}
+        </div>
+
+        <div className="review-grid review-masonry">
           {siteConfig.reviews.map((review) => (
             <blockquote className="review-card" key={review.quote}>
               <div className="stars">★★★★★</div>
@@ -118,10 +141,6 @@ export default function Home() {
               <cite>{review.label}</cite>
             </blockquote>
           ))}
-        </div>
-        <div className="review-source">
-          <span>More student feedback</span>
-          <a href="https://www.italki.com/teacher/1610231" target="_blank" rel="noreferrer">View June on italki ↗</a>
         </div>
       </section>
 
