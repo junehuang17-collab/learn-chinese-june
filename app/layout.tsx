@@ -20,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <main>{children}</main>
+        <main className="site-main">
+          <div className="site-frame">{children}</div>
+        </main>
         <Footer />
       </body>
     </html>
