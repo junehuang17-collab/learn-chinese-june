@@ -5,6 +5,13 @@ import VoicePreview from "@/components/VoicePreview";
 
 const booking = siteConfig.calcom;
 
+const scenarioPills = [
+  ["☕", "COFFEE SHOP", "少糖，谢谢。", "shǎo táng, xièxie", "Less sugar, please."],
+  ["🚕", "ON A DIDI", "我在这里下车。", "wǒ zài zhèlǐ xià chē", "I'll get off here."],
+  ["🛍", "SHOPPING", "可以便宜一点吗？", "kěyǐ piányi yìdiǎn ma?", "Could you make it a little cheaper?"],
+  ["🍜", "RESTAURANT", "不要香菜，谢谢。", "bú yào xiāngcài, xièxie", "No cilantro, please."],
+];
+
 export default function Home() {
   return (
     <>
@@ -36,11 +43,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-soft intro-strip">
+      <section className="section intro-strip">
         <div className="intro-strip-inner">
-          <p className="eyebrow">CHINESE YOU'LL ACTUALLY USE</p>
-          <p className="intro-statement">“Can you speak slower?” · “How much is this?” · “Where should I get off?” · “Less sugar, please.”</p>
-          <span className="intro-note">Not textbook-perfect. Real-life useful.</span>
+          <div className="intro-label">
+            <p className="eyebrow">REAL-LIFE CHINESE</p>
+            <h2>Four phrases.<br />Four real moments.</h2>
+            <p className="intro-note">This is the kind of Chinese you'll use outside the classroom.</p>
+          </div>
+          <div className="scenario-pills">
+            {scenarioPills.map(([icon, scene, chinese, pinyin, english]) => (
+              <div className="scenario-pill" key={scene}>
+                <span className="pill-icon">{icon}</span>
+                <div className="pill-copy">
+                  <span className="pill-scene">{scene}</span>
+                  <strong>{chinese}</strong>
+                  <em>{pinyin}</em>
+                  <small>{english}</small>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -98,17 +120,8 @@ export default function Home() {
         <SectionTitle eyebrow="PRACTICAL MATERIALS" title="Chinese you can take with you." description="Short, visual, scenario-based materials for the moments when you actually need Chinese — with useful phrases you can review and reuse." />
         <div className="materials-showcase">
           <div className="starter-mockup">
-            <div className="mockup-cover">
-              <span>JUNE'S</span>
-              <strong>CHINA<br />SURVIVAL<br />CHINESE</strong>
-              <small>100+ phrases for real life · with audio</small>
-            </div>
-            <div className="mockup-page">
-              <span>01 · ORDERING FOOD</span>
-              <b>少辣，谢谢。</b>
-              <em>shǎo là, xièxie</em>
-              <small>Less spicy, please.</small>
-            </div>
+            <div className="mockup-cover"><span>JUNE'S</span><strong>CHINA<br />SURVIVAL<br />CHINESE</strong><small>100+ phrases for real life · with audio</small></div>
+            <div className="mockup-page"><span>01 · ORDERING FOOD</span><b>少辣，谢谢。</b><em>shǎo là, xièxie</em><small>Less spicy, please.</small></div>
           </div>
           <div className="materials-copy">
             <span className="free-badge">FREE STARTER PREVIEW</span>
@@ -120,36 +133,19 @@ export default function Home() {
         </div>
         <div className="material-grid material-grid-home">
           {siteConfig.materials.slice(0, 3).map((item) => (
-            <article className="material-card" key={item.title}>
-              <div className="material-art">{item.icon}</div>
-              <div className="material-content">
-                <span className="level">{item.level}</span>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <a href={siteConfig.payhip} target="_blank" rel="noreferrer">Preview / get materials →</a>
-              </div>
-            </article>
+            <article className="material-card" key={item.title}><div className="material-art">{item.icon}</div><div className="material-content"><span className="level">{item.level}</span><h3>{item.title}</h3><p>{item.description}</p><a href={siteConfig.payhip} target="_blank" rel="noreferrer">Preview / get materials →</a></div></article>
           ))}
         </div>
       </section>
 
       <section className="section section-soft reviews-editorial">
         <SectionTitle eyebrow="STUDENT VOICES" title="Real learners. Real progress." description="The goal isn't to sound perfect in a textbook. It's to feel comfortable using Chinese in real life." />
-        <div className="review-summary">
-          <div className="review-score"><strong>{siteConfig.reviewStats.rating}</strong><div className="stars" aria-label="5 out of 5 stars">★★★★★</div><span>{siteConfig.reviewStats.reviews} reviews</span></div>
-          <div className="review-stat"><strong>{siteConfig.reviewStats.attendance}</strong><span>Attendance</span></div>
-          <div className="review-stat"><strong>{siteConfig.reviewStats.response}</strong><span>Response rate</span></div>
-        </div>
+        <div className="review-summary"><div className="review-score"><strong>{siteConfig.reviewStats.rating}</strong><div className="stars">★★★★★</div><span>{siteConfig.reviewStats.reviews} reviews</span></div><div className="review-stat"><strong>{siteConfig.reviewStats.attendance}</strong><span>Attendance</span></div><div className="review-stat"><strong>{siteConfig.reviewStats.response}</strong><span>Response rate</span></div></div>
         <div className="review-tags">{siteConfig.reviewTags.map(([label, count]) => <span key={label}>{label} <b>· {count}</b></span>)}</div>
         <div className="review-grid review-masonry">{siteConfig.reviews.map((review) => <blockquote className="review-card" key={review.quote}><div className="stars">★★★★★</div><p>“{review.quote}”</p><cite>{review.label}</cite></blockquote>)}</div>
       </section>
 
-      <section className="final-cta">
-        <p className="eyebrow">READY TO USE CHINESE?</p>
-        <h2>Stop studying Chinese.<br />Start living in it.</h2>
-        <p>Book a low-pressure 20-minute trial lesson and tell me what you want to be able to do in Chinese. We'll take it from there.</p>
-        <div className="button-row center"><a className="button button-light" href={booking} target="_blank" rel="noreferrer">Book a 20-min Trial Lesson</a><Link className="button button-outline-light" href="/materials">Get Free Starter Kit</Link></div>
-      </section>
+      <section className="final-cta"><p className="eyebrow">READY TO USE CHINESE?</p><h2>Stop studying Chinese.<br />Start living in it.</h2><p>Book a low-pressure 20-minute trial lesson and tell me what you want to be able to do in Chinese. We'll take it from there.</p><div className="button-row center"><a className="button button-light" href={booking} target="_blank" rel="noreferrer">Book a 20-min Trial Lesson</a><Link className="button button-outline-light" href="/materials">Get Free Starter Kit</Link></div></section>
     </>
   );
 }
