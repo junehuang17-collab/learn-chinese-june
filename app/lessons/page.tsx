@@ -8,7 +8,7 @@ export default function LessonsPage() {
         <p className="eyebrow">1-ON-1 MANDARIN</p>
         <h1>Practical Chinese lessons built around you.</h1>
         <p>Personalized Mandarin lessons for real-life communication, travel, daily life and long-term speaking goals.</p>
-        <a className="button button-dark" href={siteConfig.calendly} target="_blank" rel="noreferrer">Book a lesson</a>
+        <a className="button button-dark" href={siteConfig.calcom} target="_blank" rel="noreferrer">Book a lesson</a>
       </section>
 
       <section className="section">
@@ -29,7 +29,7 @@ export default function LessonsPage() {
               <h3>{lesson.title}</h3>
               <p>{lesson.description}</p>
               <ul>{lesson.items.map((item) => <li key={item}>{item}</li>)}</ul>
-              <a href={siteConfig.calendly} target="_blank" rel="noreferrer">Book a lesson →</a>
+              <a href={siteConfig.calcom} target="_blank" rel="noreferrer">Book a lesson →</a>
             </article>
           ))}
         </div>
