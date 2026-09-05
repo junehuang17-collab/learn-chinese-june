@@ -31,7 +31,7 @@ export default function AboutPage() {
 
       <section className="final-cta">
         <h2>Ready to make Chinese practical?</h2>
-        <a className="button button-light" href={siteConfig.calendly} target="_blank" rel="noreferrer">Book a lesson</a>
+        <a className="button button-light" href={siteConfig.calcom} target="_blank" rel="noreferrer">Book a lesson</a>
       </section>
     </div>
   );
