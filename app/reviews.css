@@ -1,23 +1,26 @@
-.reviews-editorial .review-grid.review-masonry{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
-.reviews-editorial .review-card{margin:0;padding:26px 26px 24px;background:#fff;border:1px solid rgba(100,31,43,.10);border-top:4px solid var(--burgundy);border-radius:18px;box-shadow:0 10px 28px rgba(36,36,36,.045);display:flex;flex-direction:column;min-width:0;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
-.reviews-editorial .review-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(36,36,36,.08)}
-.reviews-editorial .review-profile{display:flex;align-items:center;gap:14px;min-width:0;margin-bottom:14px}
-.reviews-editorial .review-avatar-wrap{position:relative;width:64px;height:64px;flex:0 0 64px}
-.reviews-editorial .review-avatar{width:64px;height:64px;display:grid;place-items:center;border-radius:50%;overflow:hidden}
-.reviews-editorial .review-avatar-photo{object-fit:cover;object-position:center;width:64px;height:64px;display:block}
-.reviews-editorial .review-avatar-initial{font-family:Arial,Helvetica,sans-serif;font-size:1.45rem;font-weight:800;color:#fff;background:#10b981}
-.reviews-editorial .review-flag{position:absolute;right:-2px;bottom:-2px;width:25px;height:25px;display:grid;place-items:center;border-radius:50%;background:#fff;border:2px solid #fff;box-shadow:0 2px 7px rgba(0,0,0,.16);font-size:14px;line-height:1}
-.reviews-editorial .review-student-meta{display:flex;flex-direction:column;justify-content:center;min-width:0}
-.reviews-editorial .review-student-meta strong{display:block;color:#3f3b4f;font-size:1.02rem;line-height:1.25;font-weight:800;white-space:normal}
-.reviews-editorial .review-student-meta span{display:block;margin-top:5px;color:#9a9aa9;font-size:.88rem;line-height:1.2;font-weight:600}
-.reviews-editorial .review-card>.stars{margin:0 0 14px;color:var(--burgundy);font-size:.9rem;line-height:1;letter-spacing:.16em}
-.reviews-editorial .review-card>p{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:1.2rem;line-height:1.62;color:#4b5563;letter-spacing:-.012em}
-.reviews-editorial .review-date{margin-top:20px;padding-top:14px;border-top:1px solid #eee9e3}
-.reviews-editorial .review-date time{color:#9a9aa9;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;line-height:1.2;font-weight:600}
-.reviews-editorial .review-pin{margin-left:auto;flex:0 0 auto;width:30px;height:30px;color:#b9b9b9;display:grid;place-items:center}
-.reviews-editorial .review-pin svg{width:28px;height:28px;display:block}
-.reviews-editorial > .review-grid.review-masonry > .review-grid.review-masonry{display:contents}
-.reviews-editorial > .review-grid.review-masonry > .review-grid.review-masonry > .review-card:first-child .review-flag{font-size:0}
-.reviews-editorial > .review-grid.review-masonry > .review-grid.review-masonry > .review-card:first-child .review-flag::after{content:"🇷🇺";font-size:14px}
-@media(max-width:900px){.reviews-editorial .review-grid.review-masonry{grid-template-columns:1fr;gap:16px}.reviews-editorial .review-card{padding:24px 22px 22px}.reviews-editorial .review-card>p{font-size:1.12rem;line-height:1.62}}
-@media(max-width:520px){.reviews-editorial .review-card{padding:22px 18px 20px;border-radius:16px}.reviews-editorial .review-avatar-wrap,.reviews-editorial .review-avatar,.reviews-editorial .review-avatar-photo{width:58px;height:58px}.reviews-editorial .review-avatar-wrap{flex-basis:58px}.reviews-editorial .review-flag{width:23px;height:23px;font-size:13px}.reviews-editorial .review-student-meta strong{font-size:.98rem}.reviews-editorial .review-student-meta span{font-size:.82rem}.reviews-editorial .review-card>p{font-size:1.05rem}.reviews-editorial .review-date{margin-top:18px}}
+.reviews-editorial{--reviews-burgundy:#5B1E28;--reviews-burgundy-dark:#4A151E;--reviews-ivory:#FAF7F2;--reviews-paper:#FFFFFF;--reviews-text:#3E3432;--reviews-muted:#766865;--reviews-border:#EEE7DF;background:var(--reviews-ivory)}
+.reviews-heading{max-width:760px;margin:0 auto 52px;text-align:center}
+.reviews-eyebrow{margin:0 0 16px;color:var(--reviews-burgundy);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.2em;line-height:1;text-transform:uppercase}
+.reviews-heading h2{margin:0;color:var(--reviews-burgundy-dark);font-family:"Playfair Display","Merriweather",Georgia,serif;font-size:clamp(2.8rem,5vw,4.6rem);font-weight:500;letter-spacing:-.035em;line-height:.98}
+.reviews-heading h2 span{display:block}.reviews-heading h2 span:last-child{font-style:italic}
+.reviews-intro{max-width:570px;margin:22px auto 0;color:var(--reviews-muted);font-size:.98rem;line-height:1.75}
+.review-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+.review-card{position:relative;display:flex;min-width:0;flex-direction:column;padding:28px;background:var(--reviews-paper);border:1px solid var(--reviews-border);border-radius:24px;box-shadow:0 8px 24px rgba(74,21,30,.035),0 2px 6px rgba(74,21,30,.025);transition:transform 220ms ease,box-shadow 220ms ease,border-color 220ms ease}
+.review-card:hover{transform:translateY(-4px);border-color:rgba(91,30,40,.14);box-shadow:0 18px 42px rgba(74,21,30,.075),0 4px 10px rgba(74,21,30,.035)}
+.review-avatar-wrap{position:relative;width:64px;height:64px;flex:0 0 64px;margin-bottom:24px}
+.review-avatar{width:64px;height:64px;display:grid;place-items:center;overflow:hidden;border-radius:999px;border:1px solid rgba(91,30,40,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.42),0 5px 14px rgba(74,21,30,.09)}
+.review-avatar-photo{display:block;width:64px;height:64px;object-fit:cover;object-position:center}
+.review-avatar-initial{font-family:"DM Sans",Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:1.45rem;font-weight:650;letter-spacing:-.02em}
+.review-avatar-burgundy{color:#FAF7F2;background:linear-gradient(145deg,#71303C 0%,#5B1E28 100%)}
+.review-avatar-rose{color:#5B1E28;background:linear-gradient(145deg,#EAD7D5 0%,#D9BABB 100%)}
+.review-avatar-sand{color:#5B1E28;background:linear-gradient(145deg,#EEE3D3 0%,#D8C4A9 100%)}
+.review-avatar-ivory{color:#5B1E28;background:linear-gradient(145deg,#FAF7F2 0%,#EEE6DB 100%)}
+.review-flag{position:absolute;right:-2px;bottom:-2px;width:20px;height:20px;display:grid;place-items:center;border-radius:999px;background:#fff;border:1.5px solid #fff;box-shadow:0 2px 7px rgba(45,25,28,.14);font-size:12px;line-height:1}
+.review-quote{position:relative;margin:0 0 30px;color:var(--reviews-text);font-family:"Playfair Display","Merriweather",Georgia,serif;font-size:1.08rem;font-weight:400;line-height:1.7;letter-spacing:-.008em;flex:1}
+.review-quote::before{content:"“";position:absolute;top:-13px;left:-3px;color:rgba(91,30,40,.10);font-family:Georgia,serif;font-size:4rem;line-height:1}
+.review-footer{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding-top:18px;border-top:1px solid #F0EBE5}
+.review-student-meta{min-width:0}.review-student-meta strong{display:block;color:#4A3D3A;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:.78rem;font-weight:650;line-height:1.45}
+.review-stars{margin-top:5px;color:#8B4B55;font-family:Georgia,serif;font-size:.72rem;letter-spacing:.12em;line-height:1}
+.review-footer time{flex:0 0 auto;color:#9B8F8A;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:.68rem;font-weight:500;white-space:nowrap}
+@media(max-width:1024px){.review-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.reviews-heading{margin-bottom:42px}}
+@media(max-width:680px){.review-grid{grid-template-columns:1fr;gap:16px}.review-card{padding:24px 22px;border-radius:20px}.review-avatar-wrap,.review-avatar,.review-avatar-photo{width:52px;height:52px}.review-avatar-wrap{flex-basis:52px}.review-flag{width:18px;height:18px;right:-1px;bottom:-1px;font-size:10px}.review-quote{font-size:1rem;line-height:1.68}.review-footer{align-items:flex-start;flex-direction:column;gap:8px}}
