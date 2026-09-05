@@ -30,7 +30,7 @@ export default function MaterialsPage() {
       <section className="final-cta">
         <p className="eyebrow">WANT TO PRACTICE WITH ME?</p>
         <h2>Turn useful Chinese into confident Chinese.</h2>
-        <a className="button button-light" href={siteConfig.calendly} target="_blank" rel="noreferrer">Book a 1-on-1 lesson</a>
+        <a className="button button-light" href={siteConfig.calcom} target="_blank" rel="noreferrer">Book a 1-on-1 lesson</a>
       </section>
     </div>
   );
