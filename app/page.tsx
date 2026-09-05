@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./hero.css";
+import "./reviews.css";
 import { siteConfig } from "@/data/site";
 import SectionTitle from "@/components/SectionTitle";
 import Reviews from "@/components/Reviews";
