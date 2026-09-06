@@ -1,22 +1,22 @@
 {
-"name": "learn-chinese-june",
-"version": "1.0.0",
-"private": true,
-"scripts": {
-"dev": "next dev",
-"build": "next build",
-"start": "next start",
-"lint": "next lint"
-},
-"dependencies": {
-"next": "15.5.21",
-"react": "19.1.0",
-"react-dom": "19.1.0"
-},
-"devDependencies": {
-"typescript": "^5.9.2",
-"@types/node": "^24.3.0",
-"@types/react": "^19.1.12",
-"@types/react-dom": "^19.1.9"
-}
+  "name": "learn-chinese-june",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "gsap": "^3.13.0",
+    "lucide-react": "^0.468.0",
+    "next": "15.5.21",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "typescript": "^5.9.2"
+  }
 }
