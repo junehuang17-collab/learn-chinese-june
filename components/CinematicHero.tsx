@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Lock } from "lucide-react";
 import { gsap } from "gsap";
+import { siteConfig } from "@/data/site";
 
 const VIDEO_SRC = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260510_060007_60275ce7-030c-4668-a160-8f364ec537d3.mp4";
 
@@ -52,51 +53,23 @@ export default function CinematicHero() {
   return (
     <section className="cinematic-hero" aria-label="Learn Chinese with June">
       <div ref={mediaRef} className="cinematic-media">
-        <video
-          ref={videoRef}
-          src={VIDEO_SRC}
-          autoPlay
-          muted
-          loop
-          playsInline
-          onLoadedMetadata={handleMetadata}
-          className="cinematic-video"
-          aria-hidden="true"
-        />
+        <video ref={videoRef} src={VIDEO_SRC} autoPlay muted loop playsInline onLoadedMetadata={handleMetadata} className="cinematic-video" aria-hidden="true" />
       </div>
       <div className="cinematic-overlay" />
       <div className="cinematic-grain" />
-
       <div className="cinematic-copy">
         <p className="cinematic-kicker">PRACTICAL MANDARIN · REAL-LIFE CHINESE</p>
-        <h1>
-          <span>Chinese for the life</span>
-          <span className="muted-line">you actually live.</span>
-        </h1>
-        <p className="cinematic-lead">
-          Learn natural Mandarin through the situations that matter — traveling, eating,
-          shopping, getting around China, and having real conversations.
-        </p>
+        <h1><span>Chinese for the life</span><span className="muted-line">you actually live.</span></h1>
+        <p className="cinematic-lead">Learn natural Mandarin through the situations that matter — traveling, eating, shopping, getting around China, and having real conversations.</p>
         <div className="cinematic-actions">
-          <a className="cinematic-button primary" href="https://cal.com" target="_blank" rel="noreferrer">Book a trial lesson</a>
+          <a className="cinematic-button primary" href={siteConfig.calcom} target="_blank" rel="noreferrer">Book a trial lesson</a>
           <Link className="cinematic-button glass" href="/materials">Explore free resources</Link>
         </div>
-        <div className="cinematic-proof">
-          <span>1-on-1</span><i />
-          <span>CTCSOL certified</span><i />
-          <span>Native Mandarin</span>
-        </div>
+        <div className="cinematic-proof"><span>1-on-1</span><i /><span>CTCSOL certified</span><i /><span>Native Mandarin</span></div>
       </div>
-
       <div className="cinematic-bottom">
-        <div>
-          <strong>Learn it. Practice it. Use it.</strong>
-          <span>Teacher-made lessons built around your real life.</span>
-        </div>
-        <div className="cinematic-secure">
-          <Lock size={13} strokeWidth={1.5} />
-          <span>PERSONALIZED · PRACTICAL · SPEAKING-FOCUSED</span>
-        </div>
+        <div><strong>Learn it. Practice it. Use it.</strong><span>Teacher-made lessons built around your real life.</span></div>
+        <div className="cinematic-secure"><Lock size={13} strokeWidth={1.5} /><span>PERSONALIZED · PRACTICAL · SPEAKING-FOCUSED</span></div>
       </div>
     </section>
   );
